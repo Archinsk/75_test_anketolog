@@ -70,6 +70,7 @@
         :class="additionalClasses.field"
         v-model="inputValue"
         @input="$emit('input', inputValue)"
+        @keyup.enter="$emit('confirm-file-structure-item-edition')"
       />
     </template>
   </vb-form-group>
@@ -146,9 +147,6 @@ export default {
   watch: {
     value: function () {
       this.inputValue = this.value;
-      if (this.pickr && !this.value) {
-        this.pickr.clear();
-      }
     },
   },
 };

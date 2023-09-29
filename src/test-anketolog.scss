@@ -18,3 +18,7 @@
   max-width: 2.375rem;
   max-height: 2.375rem;
 }
+
+.form-control[readonly] {
+  background-color: unset;
+}
